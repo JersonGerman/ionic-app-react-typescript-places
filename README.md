@@ -1,7 +1,7 @@
 # ionic-app-react-typescript-places
 
 
-##Instalación
+## Instalación
 
 Instalar la version LTS de [Node.js](https://nodejs.org) v16+ 
 
@@ -24,7 +24,7 @@ npm install -g @ionic/cli
 ionic --help
 ```
 
-##Ejecución
+## Ejecución
 
 Iniciar  el servidor de desarrollo. 
 
@@ -34,7 +34,7 @@ npm start
 ionic serve
 ```
 
-##Construir aplicación android
+## Construir aplicación android
 
 Construir build para la web. Más información [aquí](https://ionicframework.com/docs/developing/android#project-setup)
 
@@ -49,9 +49,16 @@ ionic cap add android
 ```
 
 Sincronizar build con android
+
 ```sh
 ionic cap copy android
 ionic cap sync
+```
+
+Abrir el proyecto en el IDE de android studio 
+
+```sh
+npx cap open android
 ```
 
 
