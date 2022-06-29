@@ -1,29 +1,58 @@
 # ionic-app-react-typescript-places
 
 
-``Instalación
+##Instalación
 
-1.Instalar la version LTS de Nodejs: https://nodejs.org
+Instalar la version LTS de [Node.js](https://nodejs.org) v16+ 
 
-2.clonar el repositorio
-``
+clonar el repositorio.
+
+```sh
 git clone https://github.com/JersonGerman/ionic-app-react-typescript-places.git
-``
+```
 
-2.Instalar las dependecias del proyecto
-``
+Instalar las dependecias del proyecto.
+
+```sh
 npm install
-``
+```
 
-2.Instalar la CLI de Ionic: mas información https://ionicframework.com/docs/reference/glossary#cli
-``
+Instalar la CLI de Ionic. Más información [aquí](https://ionicframework.com/docs/reference/glossary#cli)
+
+```sh
 npm install -g @ionic/cli
-``
+ionic --help
+```
 
-Ejecución
+##Ejecución
 
-``
+Iniciar  el servidor de desarrollo. 
+
+```sh
 npm start
 ó
 ionic serve
-``
+```
+
+##Construir aplicación android
+
+Construir build para la web. Más información [aquí](https://ionicframework.com/docs/developing/android#project-setup)
+
+```sh
+ionic build
+```
+
+Agregar plataforma android
+
+```sh
+ionic cap add android
+```
+
+Sincronizar build con android
+```sh
+ionic cap copy android
+ionic cap sync
+```
+
+
+
