@@ -1,5 +1,10 @@
 # ionic-app-react-typescript-places
 
+Ionic 6.20.1
+Nodejs 16.14.2
+npm 8.5.0
+
+Proyecto móvil de registro de lugares con redux-toolkit y capacitor.
 
 ## Instalación
 

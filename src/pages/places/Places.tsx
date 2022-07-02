@@ -1,15 +1,18 @@
-import { IonAvatar, IonContent, IonHeader, IonImg, IonItem, IonLabel, IonList, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import { PlacesService } from '../../services/places/places.service';
+import { IonAvatar, IonContent, IonFab, IonFabButton, IonHeader, IonIcon, IonImg, IonItem, IonLabel, IonList, IonPage, IonTitle, IonToolbar, useIonViewWillEnter } from '@ionic/react';
+import { add } from 'ionicons/icons';
+import { useSelector } from 'react-redux';
 
 const Places : React.FC = () =>{
 
-    const objPlaceService = new PlacesService;
-    const places = objPlaceService.getPlaces();
+    const {listPlaces} = useSelector((state:any) => state.place)   
+    useIonViewWillEnter(()=>{
+        // petición al api para obtener lista de places
+    })
 
     return (
         <IonPage>
             <IonHeader>
-                <IonToolbar>
+                <IonToolbar color='primary'>
                 <IonTitle>PLACES</IonTitle>
                 </IonToolbar>
             </IonHeader>
@@ -20,7 +23,7 @@ const Places : React.FC = () =>{
                 </IonToolbar>
                 </IonHeader>
                 <IonList>
-                    {places.map(place => 
+                    {listPlaces.map((place:any) => 
                         <IonItem key={place.id} routerLink={`/places/${place.id}`}>
                             <IonAvatar slot='start'>
                                 <IonImg src={place.imageURL} />
@@ -31,6 +34,11 @@ const Places : React.FC = () =>{
                         </IonItem>
                     )}
                 </IonList>
+                <IonFab vertical='bottom' horizontal='end' slot='fixed'>
+                    <IonFabButton color='danger' routerLink='/newPlace'>
+                        <IonIcon icon={add}></IonIcon>
+                    </IonFabButton>
+                </IonFab>
             </IonContent>
         </IonPage>
     )

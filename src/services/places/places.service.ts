@@ -19,7 +19,8 @@ export class PlacesService {
             id:"3",
             title: "Machu Picchu",
             imageURL: "https://destinoperu.net/wp-content/uploads/2020/07/MACHU-PICCHU.jpeg",
-            comments: ["Awesome place","Wonderul experience"]
+            // comments: ["Awesome place","Wonderul experience"],
+            comments:[]
         }
     ]
 
