@@ -23,19 +23,20 @@ import './theme/variables.css';
 import Places from './pages/places/Places';
 import PlaceDetail from './pages/place-detail/PlaceDetail';
 import PlaceAdd from './pages/new-place/PlaceAdd';
+import Home from './pages/home/Home';
 
 setupIonicReact();
 
 const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
-      <IonRouterOutlet>
-        <Route exact path="/home" component={Places} />
+      <IonRouterOutlet >
+        <Route exact path="/home" component={Home} />
         <Route exact path="/places" component={Places} />
         <Route exact path="/newPlace" component={PlaceAdd} />
         <Route exact path="/places/:id" component={PlaceDetail} />
         <Route exact path="/">
-          <Redirect to="/home" />
+          <Redirect to="/places" />
         </Route>
       </IonRouterOutlet>
     </IonReactRouter>

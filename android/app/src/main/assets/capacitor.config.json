@@ -1,6 +1,6 @@
 {
-	"appId": "io.ionic.starter",
-	"appName": "myFirstionicproject",
+	"appId": "com.ionic.fazcode",
+	"appName": "PlacesProject",
 	"webDir": "build",
 	"bundledWebRuntime": false
 }
